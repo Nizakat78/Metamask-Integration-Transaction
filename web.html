@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentBlock || Smart Chain</title>
+
+    <link rel="stylesheet" href="css/estilo.css">
+    <!--Google Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color:#212121;
+  color: white;
+}
+
+ .title {
+    font-family: 'Montserrat', sans-serif;
+    height:35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: none;
+    border-radius: 25px;
+    width:250px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+  }
+
+  .left-section {
+    background-color: red;
+    padding: 20px;
+  }
+
+  .right-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #houseForm {
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #houseForm h3 {
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  #houseForm label {
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  #houseForm input {
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  #houseForm button {
+    background-color: gray;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+  }
+    </style>
+</head>
+
+<body>
+    <h1 class="title">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            style="width: 35px; height: 35px;">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m1.5.5l-1.5-.5M6.75 7.364V3h-3v18m3-13.636l10.5-3.819" />
+        </svg>
+        <span>RentalBlock</span>
+    </h1>
+    <hr /><br />
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card card-body bg-dark rounded-0 mb-4">
+                    <h1 class="text-center"></h1>
+                    <div class="d-flex align-items-center">
+                        <span class="material-icons">account_balance_wallet</span>
+                        <span class="ms-2">Wallet</span>
+                    </div>
+                    <span id="account"></span>
+                </div>
+                <!-- Formulario para casas nuevas -->
+                <form id="houseForm" class="card card-body bg-dark">
+                    <h3>Añadir casa</h3>
+                    <label for="seller">Nombre completo</label>
+                    <input type="text" id="seller" class="form-control bg-dark border-0 rounded-0 text-light my-4"
+                        autofocus placeholder="James Clear" />
+                    <label for="street">Ubicación</label>
+                    <input type="text" id="street" class="form-control bg-dark border-0 rounded-0 text-light my-4"
+                        placeholder="Calle .., 7"></input>
+                    <label for="state">Estado</label>
+                    <input type="text" id="state" class="form-control bg-dark border-0 rounded-0 text-light my-4"
+                        placeholder="Obra nueva"></input>
+                    <label for="rooms">Habitaciones</label>
+                    <input type="number" id="rooms" class="form-control bg-dark border-0 rounded-0 text-light my-4"></input>
+                    <label for="price">Precio (ETH)</label>
+                    <input type="number" id="price" class="form-control bg-dark border-0 rounded-0 text-light my-4"></input>
+                    <br />
+                    <button class="btn btn-default" style="border-color: gray">Añadir</button>
+                    <button id="connectButton" class="btn btn-default" style="border-color: gray">Connect Wallet</button>
+                </form>
+            </div>
+            <!-- Carga las casas -->
+            <div class="col-md-8">
+                <div id="housesList"></div>
+            </div>
+        </div>
+    </div>
+    <script src="3js/truffle-contract.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/formulario.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@metamask/detect-provider/dist/detect-provider.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RentalBlock</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1 class="title">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+      style="width: 35px; height: 35px;">
+      <path stroke-linecap="round" stroke-linejoin="round"
+        d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m1.5.5l-1.5-.5M6.75 7.364V3h-3v18m3-13.636l10.5-3.819" />
+    </svg>
+    <span>RentalBlock</span>
+  </h1>
+  <hr /><br />
+
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card card-body bg-dark rounded-0 mb-4">
+          <button id="connectButton" class="wallet-button">Connect Metamask Wallet</button>
+          <div class="wallet-container">
+            <label for="address">Wallet Address:</label>
+            <input type="text" id="address" readonly>
+          </div>
+
+          <form id="houseForm" class="card card-body bg-dark">
+            <h3>Add House</h3>
+            <label for="seller">Full Name</label>
+            <input type="text" id="seller" class="form-control bg-dark border-0 rounded-0 text-light my-4"
+              autofocus placeholder="James Clear" />
+            <label for="street">Location</label>
+            <input type="text" id="street" class="form-control bg-dark border-0 rounded-0 text-light my-4"
+              placeholder="Street .., 7"></input>
+            <label for="state">State</label>
+            <input type="text" id="state" class="form-control bg-dark border-0 rounded-0 text-light my-4"
+              placeholder="new construction"></input>
+            <label for="rooms">Bedrooms</label>
+            <input type="number" id="rooms" class="form-control bg-dark border-0 rounded-0 text-light my-4"></input>
+            <label for="price">Price (ETH)</label>
+            <input type="number" id="price" class="form-control bg-dark border-0 rounded-0 text-light my-4"></input>
+            <br />
+            <button class="btn btn-default" style="border-color: gray">Add</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
+          <div id="imageUpload">
+            <h3>Upload Your House</h3>
+            <input type="file" id="imageInput" accept="image/*">
+            <button id="uploadButton" class="btn btn-default">Upload</button>
+          </div>
+          <div id="imageList"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

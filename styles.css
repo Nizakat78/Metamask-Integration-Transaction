@@ -1,0 +1,106 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #F5F5F5;
+  color: #333333;
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: none;
+  border-radius: 25px;
+  width: 250px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}
+
+.col-md-4 {
+  background-color: #FFFFFF;
+  padding: 20px;
+  position: relative;
+}
+
+.card {
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card h1 {
+  display: none; /* Hide the heading */
+}
+
+.card button.wallet-button {
+  background-color: gray;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.wallet-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.wallet-container label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.wallet-container input[type="text"] {
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  text-align: center;
+  width: 250px;
+}
+
+#imageUpload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+#imageUpload h3 {
+  margin-bottom: 10px;
+}
+
+#imageInput {
+  margin-bottom: 10px;
+}
+
+#uploadButton {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+#imageList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#imageList img {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+}
